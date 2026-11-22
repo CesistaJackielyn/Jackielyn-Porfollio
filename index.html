@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jackielyn G. Cesista | CS Student Portfolio</title>
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#F8F7FC">
+    <meta name="description"
+        content="Portfolio of Jackielyn G. Cesista, a CS student at SORSU. I am interested in technology, programming and web development.">
+
+    <!-- Link to our CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Marks the page as "JavaScript is on". The CSS uses this so the site still works without JavaScript. -->
+    <script>
+        document.documentElement.classList.add('js');
+        // Safety net: if script.js did not load (wrong name, not saved, or an error),
+        // show all the content anyway instead of leaving the page empty.
+        setTimeout(function () {
+            if (!document.documentElement.classList.contains('js-ready')) {
+                document.documentElement.classList.remove('js');
+            }
+        }, 2500);
+    </script>
+</head>
+
+<body>
+
+    <!-- ===================== UNIVERSE BACKGROUND =====================
+       Fixed behind everything. Stars, glowing clouds and a hologram planet
+       move when you scroll (see "UNIVERSE BACKGROUND" in script.js). -->
+    <div class="cosmos" aria-hidden="true">
+        <div class="nebula nebula-1"></div>
+        <div class="nebula nebula-2"></div>
+        <div class="nebula nebula-3"></div>
+        <canvas id="universe"></canvas>
+        <div class="holo-grid"></div>
+    </div>
+
+
+    <a class="skip-link" href="#home">Skip to main content</a>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#home" class="brand">My<span>Portfolio</span></a>
+
+            <!-- Hamburger button (only shown on small screens when JavaScript is on) -->
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"
+                aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-tip="Go to Home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-tip="Learn about me">About</a></li>
+                <li><a href="#projects" class="nav-link" data-tip="See my projects">Projects</a></li>
+                <li><a href="#certificates" class="nav-link" data-tip="See my certificates">Certificates</a></li>
+                <li><a href="#ojt" class="nav-link" data-tip="See my OJT experience">OJT</a></li>
+                <li><a href="#skills" class="nav-link" data-tip="See my skills">Skills</a></li>
+                <li><a href="#contact" class="nav-link" data-tip="Contact me">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===================== A. HOME / INTRODUCTION ===================== -->
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">Hello, I am</p>
+                    <!-- EDIT: replace with your full name -->
+                    <h1>Jackielyn G. Cesista</h1>
+                    <!-- EDIT: replace with your course and school -->
+                    <p class="hero-role">BSCS Student &bull; SORSU</p>
+                    <!-- EDIT: change this introduction to your own words -->
+                    <p class="hero-intro">
+                        I am a Computer Science student at SORSU-Bulan Campus.
+                        I am still learning about programming, technology, and web development.
+                        I may not have a specific career goal in the IT field, but I believe that learning about computers and technology is important.
+                        I want to gain knowledge and skills that I can use in my future life, career, and everyday activities.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+                </div>
+
+                <div class="hero-photo">
+                    <!-- EDIT: put your picture in the images folder and name it profile.jpg -->
+                    <img src="images/profile.jpg" alt="Profile photo of Jackielyn G. Cesista"
+                        data-placeholder="Add your photo: images/profile.jpg" width="320" height="320">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== ABOUT ME ===================== -->
+        <section id="about" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">About Me</h2>
+
+                <div class="about-grid">
+
+                    <!-- Left: story about you -->
+                    <article class="card about-story reveal">
+                        <div class="card-body">
+                            <h3>Who I Am</h3>
+                            
+                            <p>
+                                I am Jackielyn G. Cesista, a Bachelor of Science in Computer Science student.
+                                I chose this course because I want to learn more about computers, technology, and how different systems work.
+
+                            </p>
+                            <p>
+                                As a student, I am still exploring and learning new things about programming, web development, and other areas of Computer Science.
+                                Sometimes, learning these topics can be challenging, but I see them as opportunities to improve myself.  
+                            
+                            </p>
+                            <P>
+                                My goal is not necessarily to become an IT professional.
+                                I simply want to gain knowledge and develop skills that may be useful in the future.
+                                I believe that what I learn today can help me in different situations in life.
+                            </P>
+
+                            <h4>My Goals</h4>
+                            <ul>
+                                <li>Gain more knowledge about computers and technology.</li>
+                                <li>Improve my understanding of programming and web development.</li>
+                                <li>Learn new skills that I can use in the future.</li>
+                                <li>Finish my studies and earn my degree.</li>
+                                <li>Become more confident in facing challenges and learning new things.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Right: quick facts and interests -->
+                    <article class="card about-facts reveal">
+                        <div class="card-body">
+                            <h3>Quick Facts</h3>
+                            <dl class="facts">
+                                <div>
+                                    <dt>Name</dt>
+                                    <dd>Jackielyn G. Cesista</dd>
+                                </div>
+                                <div>
+                                    <dt>Course</dt>
+                                    <dd>BSCS</dd>
+                                </div>
+                                <div>
+                                    <dt>School</dt>
+                                    <dd>SORSU</dd>
+                                </div>
+                                <div>
+                                    <dt>Year Level</dt>
+                                    <dd>4th year</dd>
+                                </div>
+                                <div>
+                                    <dt>Location</dt>
+                                    <dd>Philippines</dd>
+                                </div>
+                                <div>
+                                    <dt>Languages</dt>
+                                    <dd>English, Filipino</dd>
+                                </div>
+                            </dl>
+
+                            <h4>My Interests</h4>
+                            <div class="tags">
+                                <span class="tag">Programming</span>
+                                <span class="tag">Web Design</span>
+                                <span class="tag">Technology</span>
+                                <span class="tag">Problem-Solving</span>
+                                <span class="tag">Learning New Tools</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== B. MY PROJECTS ===================== -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">My Projects</h2>
+
+                <div class="card-grid">
+
+                    <!-- PROJECT CARD 1 (SAMPLE) -->
+                    <article class="card project-card reveal">
+                        <img class="card-img" src="images/KampusKart.jpg" alt="Screenshot of the KampusKart project"
+                            data-placeholder="Add screenshot: images/KampusKart.jpg" width="600" height="360">
+                        <div class="card-body">
+                            <h3>Kampuskart</h3>
+                            <p>
+                                KampusKart is an online shopping system designed for students and other users to browse products from different shops in one platform.
+                                It includes features such as product searching, shop browsing, product prices, shopping cart, user profile, and account login and registration.
+
+                            </p>
+                            <h4>Main Features</h4>
+                            <ul>
+                                <li>Product Browsing</li>
+                                <li>Product Search</li>
+                                <li>Product Categories</li>
+                                <li>User Profile</li>
+                                <li>User Registration and Login</li>
+                            </ul>
+                            <h4>Technologies Used</h4>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Vercel</span>
+                            </div>
+                            <h4>What I Learned</h4>
+                            <p>Through this project, I learned how to create an online shopping platform and design a user-friendly interface also gained knowledge about product browsing, user registration, and how websites can make shopping easier and more convenient for students.</p>
+                            <!-- EDIT: put your real link in href and delete the class "is-placeholder". If you have no link, delete this whole <a> line. -->
+                            <a href="#projects" class="btn btn-small is-placeholder">View Project</a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT CARD 2 (SAMPLE) -->
+                    <article class="card project-card reveal">
+                        <img class="card-img" src="images/Wumpus-World.jpg" alt="Screenshot of the Wumpus World project"
+                            data-placeholder="Add screenshot: images/Wumpus-World.jpg" width="600" height="360">
+                        <div class="card-body">
+                            <h3>Wumpus World</h3>
+                            <p>Wumpus World is an interactive AI-based game where the player explores a cave, finds gold, and avoids dangerous areas such as pits and the Wumpus.
+                                It helps users understand how artificial intelligence uses reasoning and decision-making in a game environment.
+                            </p>
+                            <h4>Main Features</h4>
+                            <ul>
+                                <li>Interactive Cave Exploration</li>
+                                <li>Player Movement and Navigation</li>
+                                <li> Gold Collection and Game Scoring</li>
+                                <li>Shooting Arrow Mechanic</li>
+                                <li>Auto-Play and Reset Game</li>
+                                <li>Game Status Monitoring</li>
+                            </ul>
+                            <h4>Technologies Used</h4>
+                            <div class="tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <h4>What I Learned</h4>
+                            <p>
+                                I learned how artificial intelligence can be applied in games and how logical reasoning helps in making decisions.
+                                I also learned about game mechanics, player movement, and how to create an interactive web-based game. 
+                            </p>
+                            <a href="#projects" class="btn btn-small is-placeholder">View Project</a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT CARD 3 (SAMPLE) -->
+                    <article class="card project-card reveal">
+                        <img class="card-img" src="images/project-3.png" alt="Screenshot of the StockTrack project"
+                            data-placeholder="Add screenshot: images/project-3.png" width="600" height="360">
+                        <div class="card-body">
+                            <h3>StockTrack</h3>
+                            <p>A mobile inventory app where staff manage supermarket products in real time and guest buyers can check prices and stock before visiting the store.
+                                It syncs with the cloud and still works offline.
+                            </p>
+                            <h4>Main Features</h4>
+                            <ul>
+                                <li>Staff login with full CRUD on products (add, edit, delete)</li>
+                                <li>Search bar</li>
+                                <li>Offline cached inventory and push alerts for low or out-of-stock items</li>
+                            </ul>
+                            <h4>Technologies Used</h4>
+                            <div class="tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Firebase</span>
+                            </div>
+                            <h4>What I Learned</h4>
+                            <p>I learned how to build a cloud-synced mobile app with Firebase, including role-based access, real-time updates, and offline caching with AsyncStorage.
+                                I also practiced designing clear loading, empty, and error states, and testing the app thoroughly with 30 test cases.</p>
+                            <a href="#projects" class="btn btn-small is-placeholder">View Project</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== C. CERTIFICATES ===================== -->
+        <section id="certificates" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Certificates</h2>
+            
+                <div class="card-grid">
+
+                    <!-- CERTIFICATE 1 (SAMPLE) -->
+                    <article class="card cert-card reveal">
+                        <!-- Clicking this button opens the large image viewer -->
+                        <button type="button" class="cert-thumb" data-full="images/certificate-1.png"
+                            data-caption="JavaScript - SoloLearn"
+                            aria-label="Open JavaScript certificate in a larger view">
+                            <img src="images/certificate-1.png" alt="JavaScript certificate from SoloLearn"
+                                data-placeholder="Add certificate: images/certificate-1.png" width="600" height="420">
+                        </button>
+                        <div class="card-body">
+                            <h3>JAVASCRIPT</h3>
+                            <p class="meta"><strong>Issued by:</strong> SoloLearn </p>
+                            <p class="meta"><strong>Completed:</strong> May, 2025</p>
+                            <!-- EDIT: paste your real certificate link in href and delete "is-placeholder" -->
+                            <a href="#certificates" class="btn btn-small is-placeholder">View Certificate</a>
+                        </div>
+                    </article>
+
+                    <!-- CERTIFICATE 2 (SAMPLE) -->
+                    <article class="card cert-card reveal">
+                        <button type="button" class="cert-thumb" data-full="images/certificate-2.png"
+                            data-caption="HTML - SoloLearn"
+                            aria-label="Open HTML certificate in a larger view">
+                            <img src="images/certificate-2.png" alt="HTML certificate from SoloLearn"
+                                data-placeholder="Add certificate: images/certificate-2.png" width="600" height="420">
+                        </button>
+                        <div class="card-body">
+                            <h3>HTML</h3>
+                            <p class="meta"><strong>Issued by:</strong> SoloLearn </p>
+                            <p class="meta"><strong>Completed:</strong> May, 2025</p>
+                            <a href="#certificates" class="btn btn-small is-placeholder">View Certificate</a>
+                        </div>
+                    </article>
+
+                    <!-- CERTIFICATE 3 (SAMPLE) -->
+                    <article class="card cert-card reveal">
+                        <button type="button" class="cert-thumb" data-full="images/certificate-3.png"
+                            data-caption="CSS - SoloLearn"
+                            aria-label="Open CSS certificate in a larger view">
+                            <img src="images/certificate-3.png" alt="CSS certificate from SoloLearn"
+                                data-placeholder="Add certificate: images/certificate-3.png" width="600" height="420">
+                        </button>
+                        <div class="card-body">
+                            <h3>CSS</h3>
+                            <p class="meta"><strong>Issued by:</strong> SoloLearn </p>
+                            <p class="meta"><strong>Completed:</strong> May, 2025</p>
+                            <a href="#certificates" class="btn btn-small is-placeholder">View Certificate</a>
+                        </div>
+                    </article>
+
+                    <!-- TIP: To add more certificates, copy one whole <article> block above and paste it here. Change the image name too. -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== D. OJT / INTERNSHIP ===================== -->
+        <section id="ojt" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">OJT / Internship Experience</h2>
+
+                <article class="card ojt-card reveal">
+                    <div class="ojt-info">
+                        <h3>Public Attorney's Office (PAO) – Bulan District Office</h3>
+                        <p class="meta"><strong>Role / Department:</strong> OJT Student Trainee – Front Desk / Client Interview & Documentation
+</p>
+                        <p class="meta"><strong>Dates / Total Hours:</strong> July 3, 2026 – August 7, 2026 (213 hrs 45 mins)</p>
+
+                        <h4>Tasks and Responsibilities</h4>
+                        <ul>
+                            <li>Interviewed clients and recorded their details in the official logbook</li>
+                            <li>Assisted in notarizing documents and helped clients who were unable to write</li>
+                            <li>Printed, encoded, organized and sorted legal documents and client records</li>
+                        </ul>
+
+                        <h4>Skills Learned</h4>
+                        <div class="tags">
+                            <span class="tag">Client Interviewing</span>
+                            <span class="tag">Document Preparation</span>
+                            <span class="tag">Attention to Detail</span>
+                        </div>
+
+                        <a href="#ojt" class="btn btn-small is-placeholder">View OJT Certificate</a>
+                    </div>
+
+                    <div class="ojt-cert">
+                        <button type="button" class="cert-thumb" data-full="images/ojt-certificate.jpg"
+                            data-caption="OJT Certificate" aria-label="Open OJT certificate in a larger view">
+                            <img src="images/ojt-certificate.jpg" alt="OJT certificate image"
+                                data-placeholder="Add certificate: images/ojt-certificate.jpg" width="600" height="420">
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===================== E. SKILLS ===================== -->
+        <section id="skills" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title reveal">Skills</h2>
+
+                <div class="skills-grid">
+
+                    <div class="card skill-group reveal">
+                        <h3>Programming Languages &amp; Web Development</h3>
+                        <div class="badges">
+                            <span class="badge badge-blue">HTML</span>
+                            <span class="badge badge-blue">CSS</span>
+                            <span class="badge badge-blue">JavaScript</span>
+                            <span class="badge badge-purple">Python</span>
+                            <span class="badge badge-purple">Java</span>
+                            <span class="badge badge-purple">C / C++</span>
+                            <span class="badge badge-purple">PHP</span>
+                            <span class="badge badge-teal">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-group reveal">
+                        <h3>Database &amp; Development Tools</h3>
+                        <div class="badges">
+                            <span class="badge badge-teal">Database Basics</span>
+                            <span class="badge badge-teal">SQL / MySQL</span>
+                            <span class="badge badge-blue">Git</span>
+                            <span class="badge badge-blue">GitHub</span>
+                            <span class="badge badge-blue">VS Code</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-group reveal">
+                        <h3>Productivity Tools</h3>
+                        <div class="badges">
+                            <span class="badge badge-purple">Microsoft Word</span>
+                            <span class="badge badge-purple">Microsoft Excel</span>
+                            <span class="badge badge-purple">Microsoft PowerPoint</span>
+                            <span class="badge badge-purple">Google Workspace</span>
+                        </div>
+                    </div>
+
+                    <div class="card skill-group reveal">
+                        <h3>Soft Skills</h3>
+                        <div class="badges">
+                            <span class="badge badge-teal">Teamwork</span>
+                            <span class="badge badge-teal">Communication</span>
+                            <span class="badge badge-teal">Problem-Solving</span>
+                            <span class="badge badge-teal">Time Management</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== F. CONTACT ===================== -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title reveal">Contact Me</h2>
+
+                <div class="contact-grid">
+
+                    <div class="card contact-info reveal">
+                        <h3>Let's connect</h3>
+                        <p>Send me a message or find me on these sites.</p>
+                        <ul class="contact-list">
+                            <!-- EDIT: change the email address -->
+                            <li><strong>Email:</strong> <a id="myEmail"
+                                    href="mailto:jackielyn.cesista@sorsu.edu.ph">jackielyn.cesista@sorsu.edu.ph</a></li>
+                            <!-- EDIT: put your real profile links in href and delete "is-placeholder" -->
+                            
+                        </ul>
+                    </div>
+
+                    <form class="card contact-form reveal" id="contactForm" action="#" method="get">
+                        <h3>Send a message</h3>
+
+                        <div class="form-group">
+                            <label for="name">Name <span aria-hidden="true">*</span></label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                            <p class="error" id="nameError" role="alert"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email <span aria-hidden="true">*</span></label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                            <p class="error" id="emailError" role="alert"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span aria-hidden="true">*</span></label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <p class="error" id="messageError" role="alert"></p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Check My Message</button>
+
+                        <!-- The result message appears here -->
+                        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+                        <noscript>
+                            <p class="form-note">JavaScript is turned off, so this form cannot work. Please use the
+                                email link instead.</p>
+                        </noscript>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <!-- The year is added automatically by JavaScript. The text 2026 is only shown if JavaScript is off. -->
+            <p>&copy; <span id="year">2026</span> Jackielyn G. Cesista. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="#contact" class="is-placeholder">GitHub</a>
+                <a href="#contact" class="is-placeholder">LinkedIn</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</button>
+
+    <!-- Small message box shown when a placeholder link is clicked -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Image viewer (modal) for certificates -->
+    <div class="modal" id="imageModal" hidden role="dialog" aria-modal="true" aria-label="Certificate preview">
+        <button type="button" class="modal-close" id="modalClose" aria-label="Close preview">&times;</button>
+        <div class="modal-body">
+            <img id="modalImage" alt="">
+            <p class="modal-missing" id="modalMissing" hidden>This image was not found. Add the file to the images
+                folder.</p>
+            <p class="modal-caption" id="modalCaption"></p>
+        </div>
+    </div>
+
+    <!-- Link to our JavaScript file (at the end so the page loads first) -->
+    <script src="script.js"></script>
+</body>
+
+</html>
